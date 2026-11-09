@@ -33,3 +33,16 @@ One-page business brief, documented analysis, privacy-safe Tableau risk dashboar
 - [ ] Metrics and periods defined
 - [ ] Stakeholder questions agreed
 - [ ] Success criteria confirmed
+
+
+Data received: Trading 212 current holdings snapshot, 9 November 2026.
+
+Initial observation: The portfolio contains 21 holdings, with approximately 56% allocated to two ETFs and 44% to individual equities.
+
+Potential issue: Individual holdings may overlap with the underlying constituents of the S&P 500 ETF, creating correlated exposures.
+
+Analytical decision: Investigate concentration, diversification and downside risk using historical returns and the portfolio's current weights.
+
+Next step: Verify instrument identifiers, currencies and available historical price data before finalising the modelling period and benchmark.
+
+We now have sufficient information to complete most of Stage 1: ASK and begin planning Stage 2: PREPARE. I would keep the research questions provisional until we've checked the coverage and quality of the historical datasets.
