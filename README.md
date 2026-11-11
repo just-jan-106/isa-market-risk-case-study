@@ -22,13 +22,13 @@ I built two interactive dashboards to present the results.
 
 This dashboard looks at the portfolio itself, including asset allocation, risk contributions, historical performance, drawdowns and correlations.
 
-![ISA Market Risk Overview](assets/portfolio_analysis.png)
+![ISA Market Risk Overview](isa-market-risk-case-study/assets/portfolio_analysis.png)
 
 ### 2. Benchmark & Risk Analysis
 
 This dashboard compares the portfolio with the S&P 500 and explores rolling volatility, VaR backtesting, historical stress losses and model sensitivity.
 
-![Benchmark and Risk Analysis](assets/benchmark_analysis.png)
+![Benchmark and Risk Analysis](isa-market-risk-case-study/assets/benchmark_analysis.png)
 
 **[View the interactive dashboards on Tableau Public](https://public.tableau.com/app/profile/jan.b7461/viz/ISAPortfolioMarketRiskAnalysis/Dashboard1)**
 
@@ -90,7 +90,6 @@ The calculations and methodology are available in the `sql/` folder and the [Ana
 ├── tests/            # Data validation tests
 ├── PROJECT_SUMMARY.md
 ├── README.md
-└── requirements.txt
 ```
 
 ## Project Documentation
