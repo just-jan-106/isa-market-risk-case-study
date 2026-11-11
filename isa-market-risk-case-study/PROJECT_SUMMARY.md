@@ -12,7 +12,7 @@
 
 ## 1. Project Background
 
-I started this project as part of my data analytics course, where I was required to complete a capstone project demonstrating the skills I had developed.
+I started this project as part of the GOOGLE Data Analytics Certificate, where I was required to complete a capstone project demonstrating the skills I had developed.
 
 I have been investing through Trading 212 since I was 18, but I had never carried out a detailed quantitative analysis of my portfolio.
 
