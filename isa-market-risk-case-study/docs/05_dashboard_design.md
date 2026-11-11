@@ -37,13 +37,11 @@ I chose to display excess risk contribution rather than presenting portfolio wei
 
 Excess risk contribution is calculated as:
 
-\[
-\text{Excess Risk Contribution}
+[\text{Excess Risk Contribution}
 =
 \text{Risk Contribution (\%)}
 -
-\text{Portfolio Weight (\%)}
-\]
+\text{Portfolio Weight (\%)}]
 
 Positive values indicate that an instrument contributes a greater percentage of portfolio volatility than its percentage of portfolio value. Negative values indicate the opposite.
 
