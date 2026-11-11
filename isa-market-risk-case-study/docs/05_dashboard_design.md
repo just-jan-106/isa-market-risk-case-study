@@ -37,9 +37,9 @@ I chose to display excess risk contribution rather than presenting portfolio wei
 
 Excess risk contribution is calculated as:
 
-\[
-\text{Excess Risk Contribution}
-=
+
+## Excess Risk Contribution}
+
 \text{Risk Contribution (\%)}
 -
 \text{Portfolio Weight (\%)}
