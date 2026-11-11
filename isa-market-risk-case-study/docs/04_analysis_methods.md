@@ -1,3 +1,4 @@
+
 # 04 — Analysis Methods
 
 ## Overview
@@ -14,19 +15,19 @@ The portfolio was simulated using the quantities held at the time of the portfol
 
 Each instrument's value was calculated by multiplying its quantity by its historical GBP-adjusted price.
 
-For \(n\) instruments:
+For $n$ instruments:
 
-\[
+$$
 V_t=\sum_{i=1}^{n}q_iP_{i,t}
-\]
+$$
 
-where \(q_i\) represents the fixed quantity of instrument \(i\), and \(P_{i,t}\) its GBP-adjusted price on date \(t\).
+where $q_i$ represents the fixed quantity of instrument $i$, and $P_{i,t}$ its GBP-adjusted price on date $t$.
 
 The historical portfolio weight was calculated as:
 
-\[
+$$
 w_{i,t}=\frac{q_iP_{i,t}}{V_t}
-\]
+$$
 
 Quantities remained constant, while weights changed as market prices moved.
 
@@ -36,9 +37,9 @@ This is a hypothetical fixed-quantity simulation. It does not reconstruct my act
 
 Simple daily returns were calculated from consecutive simulated portfolio values:
 
-\[
+$$
 R_t=\frac{V_t}{V_{t-1}}-1
-\]
+$$
 
 The first valuation date had no preceding observation, leaving 676 valid portfolio returns.
 
@@ -50,17 +51,17 @@ This is important because the portfolio weights changed historically, even thoug
 
 Volatility was calculated using the sample standard deviation of daily portfolio returns.
 
-\[
+$$
 \sigma_d=
 \sqrt{\frac{1}{N-1}
 \sum_{t=1}^{N}(R_t-\bar R)^2}
-\]
+$$
 
 The daily estimate was annualised using:
 
-\[
+$$
 \sigma_{\text{annual}}=\sigma_d\sqrt{252}
-\]
+$$
 
 The simulated portfolio had annualised historical volatility of approximately **14.54%**.
 
@@ -72,19 +73,19 @@ This was one reason I included additional downside-risk measures.
 
 Drawdown was calculated relative to the previous highest portfolio value.
 
-\[
+$$
 M_t=\max(V_1,\ldots,V_t)
-\]
+$$
 
-\[
+$$
 D_t=\frac{V_t}{M_t}-1
-\]
+$$
 
 Maximum drawdown was the minimum value of the drawdown series:
 
-\[
+$$
 D_{\max}=\min(D_t)
-\]
+$$
 
 The simulated portfolio's maximum drawdown was approximately **−20.79%**, with the trough occurring on 7 April 2025.
 
@@ -94,11 +95,11 @@ I used drawdown alongside volatility to examine the extent of historical portfol
 
 Pearson correlations were calculated using the daily GBP-denominated returns of the 21 instruments.
 
-\[
+$$
 \rho_{ij}=
 \frac{\operatorname{Cov}(R_i,R_j)}
 {\sigma_i\sigma_j}
-\]
+$$
 
 The resulting correlation matrix was displayed as a Tableau heatmap.
 
@@ -112,37 +113,37 @@ I wanted to identify which instruments contributed the most to my portfolio's ov
 
 To do this, I used a covariance-based risk decomposition.
 
-For portfolio weights \(w\) and annualised covariance matrix \(\Sigma\):
+For portfolio weights $w$ and annualised covariance matrix $\Sigma$:
 
-\[
+$$
 \sigma_p=\sqrt{w^\mathsf{T}\Sigma w}
-\]
+$$
 
-The marginal contribution of instrument \(i\) to portfolio volatility is:
+The marginal contribution of instrument $i$ to portfolio volatility is:
 
-\[
+$$
 MRC_i=\frac{(\Sigma w)_i}{\sigma_p}
-\]
+$$
 
 Its component contribution is:
 
-\[
+$$
 RC_i=w_iMRC_i
-\]
+$$
 
 The percentage risk contribution is:
 
-\[
+$$
 RC_{i,\%}=\frac{RC_i}{\sigma_p}\times100
-\]
+$$
 
 The contributions were checked to ensure they summed to 100%, subject to rounding.
 
 I also calculated excess risk contribution:
 
-\[
+$$
 ERC_i=RC_{i,\%}-100w_i
-\]
+$$
 
 This compares an instrument's contribution to overall volatility with its share of portfolio value.
 
@@ -160,9 +161,9 @@ Historical VaR estimates a loss threshold from the lower tail of observed return
 
 For a 95% one-day historical VaR:
 
-\[
+$$
 VaR_{95\%}=-Q_{0.05}(R)
-\]
+$$
 
 The full-sample historical estimate was approximately **1.393%**.
 
@@ -176,11 +177,11 @@ The historical method uses the empirical return distribution rather than imposin
 
 I used Expected Shortfall alongside VaR because I also wanted to understand the average severity of losses beyond the estimated VaR threshold.
 
-For confidence level \(c\):
+For confidence level $c$:
 
-\[
+$$
 ES_c=-E[R\mid R\leq Q_{1-c}(R)]
-\]
+$$
 
 The historical results were:
 
@@ -201,9 +202,9 @@ This followed my original research question about how a portfolio combining ETFs
 
 Both series were indexed to 100 at the beginning of the common analysis period:
 
-\[
+$$
 I_t=100\frac{V_t}{V_0}
-\]
+$$
 
 For the benchmark, the calculation used its adjusted GBP price series.
 
@@ -211,17 +212,17 @@ Additional statistics included return correlation, beta, tracking error, annuali
 
 Beta was calculated as:
 
-\[
+$$
 \beta_p=
 \frac{\operatorname{Cov}(R_p,R_b)}
 {\operatorname{Var}(R_b)}
-\]
+$$
 
 Tracking error was calculated as:
 
-\[
+$$
 TE=\operatorname{SD}(R_p-R_b)\sqrt{252}
-\]
+$$
 
 VUAG was also a significant holding in the simulated portfolio, so the benchmark and portfolio were not independent.
 
@@ -235,12 +236,12 @@ Full-period volatility provides one estimate for the entire sample. Rolling vola
 
 I used 30- and 90-observation windows:
 
-\[
+$$
 \sigma_{t,k}=
 \operatorname{SD}(R_{t-k+1},\ldots,R_t)\sqrt{252}
-\]
+$$
 
-where \(k\) is the number of daily return observations.
+where $k$ is the number of daily return observations.
 
 The calculation required a full window before producing a result.
 
@@ -258,13 +259,13 @@ For the main backtest, each 95% one-day VaR estimate used the preceding **250 va
 
 A breach, or exception, occurred when the realised return fell below the negative VaR threshold:
 
-\[
+$$
 X_t=
 \begin{cases}
 1,&R_t<-VaR_t\\
 0,&R_t\geq-VaR_t
 \end{cases}
-\]
+$$
 
 The backtest produced:
 
@@ -279,15 +280,15 @@ The backtest produced:
 
 The Kupiec test examines whether the overall exception frequency is consistent with the model's nominal probability.
 
-\[
+$$
 LR_{UC}=
 -2\ln\left[
 \frac{(1-p)^{N-x}p^x}
 {(1-\hat p)^{N-x}\hat p^x}
 \right]
-\]
+$$
 
-where \(p\) is the nominal exception probability, \(x\) the number of exceptions, \(N\) the number of forecasts and \(\hat p=x/N\).
+where $p$ is the nominal exception probability, $x$ the number of exceptions, $N$ the number of forecasts and $\hat p=x/N$.
 
 The likelihood-ratio statistic was approximately **0.1394**, below the 5% critical value of 3.841.
 
@@ -320,18 +321,18 @@ The ten worst daily returns were identified from the simulated portfolio.
 
 For each date, the portfolio return was compared with the benchmark return, and individual holding contributions were calculated.
 
-The contribution of instrument \(i\) was:
+The contribution of instrument $i$ was:
 
-\[
+$$
 C_{i,t}=
 \frac{q_i(P_{i,t}-P_{i,t-1})}{V_{t-1}}
-\]
+$$
 
 The contributions satisfy:
 
-\[
+$$
 R_{p,t}=\sum_{i=1}^{21}C_{i,t}
-\]
+$$
 
 The individual holding contributions reconciled to the portfolio's daily return at six decimal places.
 
@@ -397,5 +398,8 @@ The calculations were implemented using the following BigQuery SQL scripts:
 | `06_var_backtesting.sql` | Historical VaR forecasts and coverage tests |
 | `07_stress_testing.sql` | Worst days and holding-level return contributions |
 | `08_sensitivity_analysis.sql` | VaR estimation-window comparison |
+
+The recovered SQL should be checked against the live BigQuery views before treating the complete pipeline as independently reproduced.
+
 
 The recovered SQL should be checked against the live BigQuery views before treating the complete pipeline as independently reproduced.
