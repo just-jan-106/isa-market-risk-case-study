@@ -130,9 +130,9 @@ This can produce a zero return for the affected instrument even when other marke
 
 After aligning the historical prices, daily simple returns were calculated using:
 
-\[
+$$
 r_t = \frac{P_t}{P_{t-1}} - 1
-\]
+$$
 
 where \(P_t\) is the current aligned GBP price and \(P_{t-1}\) is the previous aligned GBP price.
 
