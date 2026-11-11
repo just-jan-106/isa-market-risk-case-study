@@ -10,7 +10,9 @@ An anonymised current holdings snapshot was applied to historical GBP-adjusted m
 
 ## Selected findings
 | Measure | Result |
+
 | Holdings | 21 (2 ETFs, 19 equities) |
+|---|---:|
 | Simulated cumulative portfolio return | 52.51% |
 | S&P 500 ETF benchmark cumulative return | 39.20% |
 | Portfolio annualised volatility | 14.54% |
