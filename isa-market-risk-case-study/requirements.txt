@@ -1,6 +1,0 @@
-# Install only when needed; pin exact versions after a reproducible run.
-numpy
-pandas
-matplotlib
-pytest
-# google-cloud-bigquery  # enable when BigQuery ingestion is implemented

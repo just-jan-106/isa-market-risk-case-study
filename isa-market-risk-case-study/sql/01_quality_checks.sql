@@ -1,8 +1,0 @@
--- TEMPLATE ONLY. Replace placeholders after agreeing BigQuery tables/columns.
--- Example checks to implement:
--- 1. COUNT(*) and distinct dates / instruments
--- 2. Duplicate (date, instrument_id) checks
--- 3. NULL/invalid adjusted prices and currency values
--- 4. Coverage by instrument and overlapping dates
--- 5. Reconciliation of returns and risk inputs
--- Keep the actual executable queries here once schemas are fixed.
