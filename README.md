@@ -51,7 +51,7 @@ One of the more interesting findings was that some individual stocks contributed
 
 The VaR backtesting also showed how the choice of historical estimation window affected the model's results.
 
-My full interpretation of these findings is available in the [Project Summary](PROJECT_SUMMARY.md).
+My full interpretation of these findings is available in the [Project Summary](isa-market-risk-case-study/PROJECT_SUMMARY.md).
 
 ## How I Completed the Analysis
 
@@ -76,7 +76,7 @@ There were several issues to resolve before analysing the portfolio:
 
 The SQL analysis covers portfolio returns, volatility, drawdowns, correlations, risk contributions, Value at Risk, Expected Shortfall, benchmark comparisons, rolling volatility, backtesting and stress testing.
 
-The calculations and methodology are available in the `sql/` folder and the [Analysis Methods](docs/04_analysis_methods.md) document.
+The calculations and methodology are available in the `sql/` folder and the [Analysis Methods](isa-market-risk-case-study/docs/04_analysis_methods.md) document.
 
 ## Repository Structure
 
