@@ -96,13 +96,13 @@ The calculations and methodology are available in the `sql/` folder and the [Ana
 
 For more information about the project:
 
-- [Project Summary](PROJECT_SUMMARY.md) — Background, findings and what I learned
-- [Research Objectives](docs/01_business_task.md) — Why I chose the project
-- [Data Sources](docs/02_data_sources.md) — Where the data came from
-- [Data Cleaning](docs/03_data_cleaning_log.md) — Issues encountered and how I handled them
-- [Analysis Methods](docs/04_analysis_methods.md) — Statistical methods and calculations
-- [Dashboard Design](docs/05_dashboard_design.md) — Tableau visualisations and design choices
-- [Conclusions](docs/06_conclusions.md) — Interpretation and further research
+- [Project Summary](isa-market-risk-case-study/PROJECT_SUMMARY.md) — Background, findings and what I learned
+- [Research Objectives](isa-market-risk-case-study/docs/01_business_task.md) — Why I chose the project
+- [Data Sources](isa-market-risk-case-study/docs/02_data_sources.md) — Where the data came from
+- [Data Cleaning](isa-market-risk-case-study/docs/03_data_cleaning_log.md) — Issues encountered and how I handled them
+- [Analysis Methods](isa-market-risk-case-study/docs/04_analysis_methods.md) — Statistical methods and calculations
+- [Dashboard Design](isa-market-risk-case-study/docs/05_dashboard_design.md) — Tableau visualisations and design choices
+- [Conclusions](isa-market-risk-case-study/docs/06_conclusions.md) — Interpretation and further research
 
 ## Running the Project
 
