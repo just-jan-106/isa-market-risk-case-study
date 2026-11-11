@@ -134,7 +134,7 @@ $$
 r_t = \frac{P_t}{P_{t-1}} - 1
 $$
 
-where \(P_t\) is the current aligned GBP price and \(P_{t-1}\) is the previous aligned GBP price.
+where $$P_t$$ is the current aligned GBP price and $$P_{t-1}$$ is the previous aligned GBP price.
 
 The calculation used SQL's `LAG()` function to obtain the previous price for each instrument.
 
